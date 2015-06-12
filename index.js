@@ -1,7 +1,7 @@
 'use strict';
 var argv = process.argv;
 
-var SupportsColor = function () {
+function supportsColor() {
 	if ('FORCE_COLOR' in process.env) {
 		return true;
 	}
@@ -42,4 +42,4 @@ var SupportsColor = function () {
 	return false;
 };
 
-module.exports = SupportsColor();
+module.exports = supportsColor();
